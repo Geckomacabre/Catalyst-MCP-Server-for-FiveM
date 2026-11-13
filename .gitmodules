@@ -1,0 +1,4 @@
+[submodule "vendor/codewalker"]
+	path = vendor/codewalker
+	url = https://github.com/dexyfex/codewalker.git
+	shallow = true

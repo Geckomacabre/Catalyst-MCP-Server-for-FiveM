@@ -1,0 +1,52 @@
+{
+  "name": "catalyst-mcp-for-fivem",
+  "version": "0.1.0",
+  "description": "MCP server for building and editing GTA V particle effects (.ypt) for FiveM, headlessly: search the vanilla effects in your own install, merge and edit them, build Legacy .ypt files with a read-back check.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "catalyst-mcp-for-fivem": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:helper": "dotnet publish helper/PtfxHelper.csproj -c Release -o helper/bin",
+    "start": "node dist/index.js",
+    "test": "node test/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "os": [
+    "win32"
+  ],
+  "keywords": [
+    "mcp",
+    "fivem",
+    "gta5",
+    "ptfx",
+    "particles",
+    "ypt",
+    "codewalker"
+  ],
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Geckomacabre/Catalyst-MCP-Server-for-FiveM.git"
+  },
+  "homepage": "https://github.com/Geckomacabre/Catalyst-MCP-Server-for-FiveM#readme",
+  "bugs": "https://github.com/Geckomacabre/Catalyst-MCP-Server-for-FiveM/issues",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "^5.9.3"
+  }
+}

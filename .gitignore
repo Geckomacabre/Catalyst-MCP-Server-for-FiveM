@@ -1,0 +1,11 @@
+node_modules/
+dist/
+helper/bin/
+helper/obj/
+*.ypt
+*.ypt.xml
+*.dds
+*.rpf
+*.ctlst
+.vs/
+*.log

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    ptfx-helper: the CodeWalker side of Catalyst MCP for FiveM.
+    JSON request on stdin, JSON response on stdout. Builds against CodeWalker.Core from the
+    vendor/codewalker git submodule (dexyfex/codewalker, MIT).
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>ptfx-helper</AssemblyName>
+    <RootNamespace>PtfxHelper</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <NoWarn>$(NoWarn);NU1701;CS0168;CS0219</NoWarn>
+    <CodeWalkerDir Condition="'$(CodeWalkerDir)' == ''">$(MSBuildThisFileDirectory)..\vendor\codewalker</CodeWalkerDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(CodeWalkerDir)\CodeWalker.Core\CodeWalker.Core.csproj" />
+  </ItemGroup>
+
+</Project>
